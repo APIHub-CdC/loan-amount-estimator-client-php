@@ -88,7 +88,7 @@ openssl pkcs12 -name ${ALIAS} \
  > Es importante que este contenedor sea almacenado en la siguiente ruta:
  > **/path/to/repository/lib/Interceptor/keypair.p12**
  >
- > Así mismo el certificado proporcionado por círculo de crédito en la siguiente ruta:
+ > Así mismo el certificado proporcionado por Círculo de Crédito en la siguiente ruta:
  > **/path/to/repository/lib/Interceptor/cdc_cert.pem**
 - En caso de que no se almacene así, se debe especificar la ruta donde se encuentra el contenedor y el certificado. Ver el siguiente ejemplo:
 ```php
@@ -99,7 +99,7 @@ $this->signer = new \LAE\Client\Interceptor\KeyHandler(
     $password
 );
 ```
- > **NOTA:** Sólamente en caso de que el contenedor haya cifrado, se debe colocar la contraseña en una variable de ambiente e indicar el nombre de la misma, como se ve en la imagen anterior.
+ > **NOTA:** Solamente en caso de que el contenedor se haya cifrado, debe colocarse la contraseña en una variable de ambiente e indicar el nombre de la misma, como se ve en la imagen anterior.
  
 ### Paso 4. Modificar URL
 
