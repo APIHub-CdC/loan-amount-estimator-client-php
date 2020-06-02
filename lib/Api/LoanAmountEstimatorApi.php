@@ -225,9 +225,6 @@ class LoanAmountEstimatorApi
         if ($x_api_key !== null) {
             $headerParams['x-api-key'] = ObjectSerializer::toHeaderValue($x_api_key);
         }
-        if ($x_signature !== null) {
-            $headerParams['x-signature'] = ObjectSerializer::toHeaderValue($x_signature);
-        }
         if ($username !== null) {
             $headerParams['username'] = ObjectSerializer::toHeaderValue($username);
         }
@@ -480,9 +477,6 @@ class LoanAmountEstimatorApi
         $multipart = false;
         if ($x_api_key !== null) {
             $headerParams['x-api-key'] = ObjectSerializer::toHeaderValue($x_api_key);
-        }
-        if ($x_signature !== null) {
-            $headerParams['x-signature'] = ObjectSerializer::toHeaderValue($x_signature);
         }
         if ($username !== null) {
             $headerParams['username'] = ObjectSerializer::toHeaderValue($username);
