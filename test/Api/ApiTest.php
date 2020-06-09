@@ -34,44 +34,6 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $this->username = "your_username";
         $this->password = "your_password";
 
-    }    
-
-    public function testGetLAEByPerson()
-    {
-        $request = new \lae\Client\Model\PeticionPersona();
-        $persona = new \lae\Client\Model\Persona();
-        $domicilio = new \lae\Client\Model\DomicilioPeticion();        
-        $estado = new \lae\Client\Model\CatalogoEstados();
-        $segmento = new \lae\Client\Model\CatalogoSegmento();
-    
-        $domicilio->setDireccion("INSURGENTES SUR 1007");
-        $domicilio->setColoniaPoblacion("INSURGENTES SUR");
-        $domicilio->setDelegacionMunicipio("CIUDAD DE MEXICO");
-        $domicilio->setCiudad("CIUDAD DE MEXICO");
-        $domicilio->setEstado($estado::DF);
-        $domicilio->setCP(null);
-
-        $persona->setPrimerNombre("JUAN");
-        $persona->setApellidoPaterno("PRUEBA");
-        $persona->setApellidoMaterno("CUATRO");
-        $persona->setFechaNacimiento("1980-01-04");
-        $persona->setRFC("PUAC800107");
-        $persona->setDomicilio($domicilio);
-         
-        $request->setFolioOtorgante("121212");
-        $request->setSegmento($segmento::PP);
-        $request->setPersona($persona);
-
-        try {
-            $result = $this->apiInstance->getLAEByPerson($this->x_api_key, $this->username, $this->password, $request);
-            $this->assertTrue($result!==null);
-            if($result!==null){
-                print_r("getLAEByPerson");
-                print_r($result);
-            }
-        } catch (Exception $e) {
-            echo 'Exception when calling LAE->getLAEByPerson: ', $e->getMessage(), PHP_EOL;
-        }
     }
     
     public function testGetLAEByFolioConsulta()
